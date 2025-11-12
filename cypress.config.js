@@ -9,7 +9,7 @@ module.exports = defineConfig({
     openMode: 0,
   },
   defaultCommandTimeout: 5000,
-    e2e: {
+  e2e: {
     baseUrl: "https://qauto.forstudy.space",
     watchForFileChanges: false,
     experimentalRunAllSpecs: true,
