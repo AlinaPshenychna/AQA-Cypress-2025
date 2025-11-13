@@ -13,7 +13,7 @@ module.exports = defineConfig({
     baseUrl: "https://qauto.forstudy.space",
     watchForFileChanges: false,
     experimentalRunAllSpecs: true,
-    specPattern: "cypress/e2e/**/*.{spec,test}.{js,jsx,ts,tsx}",
+    specPattern: "cypress/**/*.{spec,test}.{js,jsx,ts,tsx}",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
