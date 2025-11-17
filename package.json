@@ -4,6 +4,7 @@
     "open": "npx cypress open"
   },
   "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
     "cypress": "^15.6.0"
   }
 }
