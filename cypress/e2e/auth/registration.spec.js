@@ -1,4 +1,4 @@
-describe.skip("requirements for field Name", () => {
+describe("requirements for field Name", () => {
   beforeEach(() => {
     cy.visit("/");
   });
@@ -52,7 +52,7 @@ describe.skip("requirements for field Name", () => {
   });
 });
 
-describe.skip("requirements for field Last name", () => {
+describe("requirements for field Last name", () => {
   beforeEach(() => {
     cy.visit("/");
   });
@@ -106,7 +106,7 @@ describe.skip("requirements for field Last name", () => {
   });
 });
 
-describe.skip("requirements for field Email", () => {
+describe("requirements for field Email", () => {
   beforeEach(() => {
     cy.visit("/");
   });
@@ -144,7 +144,7 @@ describe.skip("requirements for field Email", () => {
     });
   });
 });
-describe.skip("requirements for field Password", () => {
+describe("requirements for field Password", () => {
   beforeEach(() => {
     cy.visit("/");
   });
@@ -184,7 +184,7 @@ describe.skip("requirements for field Password", () => {
     });
   });
 });
-describe.skip("requirements for field Re-enter password", () => {
+describe("requirements for field Re-enter password", () => {
   beforeEach(() => {
     cy.visit("/");
   });
