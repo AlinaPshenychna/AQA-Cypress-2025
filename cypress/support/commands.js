@@ -31,3 +31,29 @@ Cypress.Commands.overwrite("visit", (originalFn, url, options) => {
     },
   });
 });
+Cypress.Commands.add("login", (email, password) => {
+  cy.visit("/");
+  cy.get(".header_signin").click();
+
+  cy.get(".modal-content").within(() => {
+    cy.get("#signinEmail").type(email);
+    cy.get("#signinPassword").type(password, { sensitive: true });
+    cy.get(".btn-primary").click();
+  });
+});
+
+//hide sensitive data(password)
+Cypress.Commands.overwrite("type", (originalFn, element, text, options) => {
+  if (options && options.sensitive) {
+    // turn off original log
+    options.log = false;
+    // create our own log with masked message
+    Cypress.log({
+      $el: element,
+      name: "type",
+      message: "*".repeat(text.length),
+    });
+  }
+
+  return originalFn(element, text, options);
+});
