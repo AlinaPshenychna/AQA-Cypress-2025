@@ -9,6 +9,10 @@ module.exports = defineConfig({
     openMode: 0,
   },
   defaultCommandTimeout: 5000,
+  env: {
+BASIC_AUTH_USERNAME:"guest1",
+BASIC_AUTH_PASSWROD: "welcomee2qauto"
+  },
   e2e: {
     baseUrl: "https://qauto.forstudy.space",
     watchForFileChanges: false,

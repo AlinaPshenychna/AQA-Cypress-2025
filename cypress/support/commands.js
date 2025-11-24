@@ -28,6 +28,8 @@ Cypress.Commands.overwrite("visit", (originalFn, url, options) => {
     auth: {
       username: "guest",
       password: "welcome2qauto",
+      // username: Cypress.env("BASIC_AUTH_USERNAME"),
+      // password: Cypress.env("BASIC_AUTH_PASSWORD"),
     },
   });
 });
@@ -56,4 +58,9 @@ Cypress.Commands.overwrite("type", (originalFn, element, text, options) => {
   }
 
   return originalFn(element, text, options);
+});
+
+Cypress.Commands.add("loginAsGuest", () => {
+  cy.visit("/");
+  cy.contains("Guest log in").click()
 });
