@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 
 describe("Auth - login", () => {
-  const password = "12345678Test"
+  const password = "12345678Test";
   const userData = {
     name: "Alina",
     lastName: "Test",
@@ -31,8 +31,7 @@ describe("Auth - login", () => {
   it("should login successfully with valid credentials", () => {
     cy.login(userData.email, userData.password);
 
-    cy.location("pathname").should("eq","/panel/garage");
-    cy.containes("Add car").should("be visible");
-
+    cy.location("pathname").should("eq", "/panel/garage");
+    cy.contains("Add car").should("be visible");
   });
 });

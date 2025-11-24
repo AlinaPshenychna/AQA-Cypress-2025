@@ -238,7 +238,7 @@ describe("button register is appear", () => {
       cy.get("#signupLastName").focus();
       cy.get("#signupLastName").type("Nas");
       cy.get("#signupEmail").focus();
-      cy.get("#signupEmail").type("alainas@qa.team");
+      cy.get("#signupEmail").type("alainasg@qa.team");
       cy.get("#signupPassword").focus();
       cy.get("#signupPassword").type("12345678aA");
       cy.get("#signupRepeatPassword").type("12345678aA");
