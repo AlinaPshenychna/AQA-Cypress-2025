@@ -62,5 +62,19 @@ Cypress.Commands.overwrite("type", (originalFn, element, text, options) => {
 
 Cypress.Commands.add("loginAsGuest", () => {
   cy.visit("/");
-  cy.contains("Guest log in").click()
+  cy.contains("Guest log in").click();
+});
+
+Cypress.Commands.add("registerUser", (user) => {
+  cy.visit("/");
+
+  cy.get(".btn-primary").click();
+  cy.get(".modal-content").within(() => {
+    cy.get("#signupName").type(user.name);
+    cy.get("#signupLastName").type(user.lastName);
+    cy.get("#signupEmail").type(user.email);
+    cy.get("#signupPassword").type(user.password, { sensitive: true });
+    cy.get("#signupRepeatPassword").type(user.password, { sensitive: true });
+    cy.get(".btn-primary").click();
+  });
 });
