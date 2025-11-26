@@ -1,5 +1,5 @@
 // import "../../support/commands.js";
-import fakeCarBrands from "../../cypress/fixtures/fakeCarBrands.json";
+import fakeCarBrands from "../../fixtures/fakeCarBrands.json";
 
 describe("Main page, popup", () => {
   beforeEach(() => {
